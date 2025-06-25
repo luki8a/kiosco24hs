@@ -1,0 +1,112 @@
+.servicios {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9fff4;
+}
+
+.servicios h2 {
+  font-size: 2.1rem;
+  margin-bottom: 2.5rem;
+  color: #222;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+/* GRID 4-2-1 igual que kioscos */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.servicio {
+  background: #fafafa;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  padding: 2.2rem 1.2rem 1.7rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.servicio:hover,
+.servicio:focus-within {
+  box-shadow: 0 8px 32px rgba(255,214,0,0.18), 0 2px 16px rgba(0,0,0,0.13);
+  transform: translateY(-6px) scale(1.04);
+  background: #fffbe6;
+}
+
+.servicio img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 1.4rem;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.10));
+  transition: filter 0.25s, transform 0.25s;
+}
+.servicio:hover img,
+.servicio:focus-within img {
+  filter: brightness(1.15) contrast(1.25) saturate(1.2) drop-shadow(0 4px 18px #FFD60055);
+  transform: scale(1.07) rotate(-2deg);
+}
+
+/* Responsive ajustes */
+@media (max-width: 900px) {
+  .servicios {
+    padding: 2.5rem 0.7rem;
+  }
+  .servicios-grid {
+    gap: 1.2rem;
+  }
+  .servicio {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+  }
+  .servicio img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios {
+    padding: 1.5rem 0.2rem;
+  }
+  .servicios h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .servicio {
+    padding: 1.1rem 2.3rem 0.8rem 2.3rem;
+    border-radius: 0.7rem;
+  }
+  .servicio img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.7rem;
+  }
+  .servicio h3 {
+    font-size: 1rem;
+  }
+  .servicio p {
+    font-size: 0.93rem;
+  }
+}
